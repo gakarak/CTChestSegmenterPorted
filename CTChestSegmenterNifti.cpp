@@ -106,7 +106,6 @@ int main(int argc, char* argv[]) {
             */
         }
 
-        /*
 		ReadObj(shape_fn, alg->sphere.vertices, alg->sphere.faces, alg->sphere.edges, 
             &alg->sphere.nv, &alg->sphere.nf, &alg->sphere.ne);
 		sprintf(buf, "Surface read : %i vertices, %i faces, %i edges\n", alg->sphere.nv, alg->sphere.nf, alg->sphere.ne);
@@ -130,11 +129,10 @@ int main(int argc, char* argv[]) {
 		Surface surf = MakeSegmentingShape(x, alg->im.hdrInfo.dims.dim);
 		LOG("Making raster image");
 		ShapeToSegmentedAnalyze(alg->im, surf.vertices, surf.faces, surf.nv, surf.nf);
-        */
 
 		if (writefile){
-			LOG("Saving the result");
-            std::stringstream ssfout;
+		    LOG("Saving the result");
+		    std::stringstream ssfout;
             ssfout << image_fn;
             ssfout << "_segm.nii.gz";
             for (int k = 0; k < alg->im.slices.size(); k++) {
